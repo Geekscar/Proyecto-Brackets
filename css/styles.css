@@ -1,8 +1,4 @@
-:root{
-    --color1: rgb(219,144,.5);
-    --color2: rgba(23,180,83, .0788);
-    --color3: rgba(11,194,211, .623);
-    --fondo: #f2f2f2;
+:root{        
     --titulos: 33px;
     --margenes: 60px;
     --espacios: 10px;
@@ -16,8 +12,8 @@
 }
 
 body{
-    font-family: 'open sans';
-    background: var(--fondo);
+    font-family: 'open sans';    
+    background: #fff; 
 }
 
 img{
@@ -25,11 +21,9 @@ img{
 }
 
 /* Preloader */
-
 .hidden{
     overflow: hidden;
 }
-
 .centrado{
     position: fixed;
     width: 100vw;
@@ -40,127 +34,110 @@ img{
     justify-content: center;
     align-items: center;
 }
-
 .lds-hourglass {
     display: inline-block;
     position: relative;
     width: 80px;
     height: 80px;
-  }
-  .lds-hourglass:after {
-    content: " ";
-    display: block;
-    border-radius: 50%;
-    width: 0;
-    height: 0;
-    margin: 8px;
-    box-sizing: border-box;
-    border: 32px solid #cef;
-    border-color: #cef transparent #cef transparent;
-    animation: lds-hourglass 1.2s infinite;
-  }
-  @keyframes lds-hourglass {
-    0% {
-      transform: rotate(0);
-      animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    }
-    50% {
-      transform: rotate(900deg);
-      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    }
-    100% {
-      transform: rotate(1800deg);
-    }
-  }
+}
+.lds-hourglass:after {
+content: " ";
+display: block;
+border-radius: 50%;
+width: 0;
+height: 0;
+margin: 8px;
+box-sizing: border-box;
+border: 32px solid #cef;
+border-color: #cef transparent #cef transparent;
+animation: lds-hourglass 1.2s infinite;
+}
+@keyframes lds-hourglass {
+0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+100% {
+    transform: rotate(1800deg);
+}
+}
 
-  /* Header */
-  header{
-      width: 100%;
-      height: 600px;
-      /* background: linear-gradient(to bottom, rgba(211,135,20,.664), rgba(29,241,171,.6), rgba(7,109,150,.40)), url(../img/fondo.jpg); */
-      background: linear-gradient(to bottom, rgba(124, 61, 241, 0.664), rgba(86,128,233,.6), rgba(90,185,234,.40), rgba(138,206,235,.40)), url(../img/geekscar_fondo.jpg);
-      background-attachment: fixed;
-      background-position: center;
-      background-size: cover;
-  }
-
-  nav{
-      width: 100%;
-      position: fixed;      
-      box-shadow: 0 0 10px 0 rgba(0,0,0,.5);
-  }
-
-  .nav1{
-      background: transparent;
-      height:80px;
-      color: #fff;
-  }
-
-  .nav2{
-      background: var(--fondo);
-      height: 100px;
-      color: #000;
-  }
-
-  .contenedor-nav{
-      display: flex;
-      margin: auto;
-      width: 90%;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1000px;
-      height: inherit;
-      overflow: hidden;
-  }
-
-  nav .enlaces a{
-      display: inline-block;
-      padding: 5px 0;
-      margin-right: 17px;
-      font-size: 17px;
-      font-weight: 300;
-      text-decoration: none;
-      border-bottom: 3px solid transparent;
-      color: inherit;
-  }
-
-  nav .enlaces a:hover{
-      border-bottom: 3px solid #1498a4;
-      transition: 0.6s;
-  }
-
-  .logo, .logo img{
-      height: 80px;
-  }
-
-  .icono{
-      display: none;
-      font-size: 24px;
-      padding: 23.5px 20px;
-  }
-
-  .textos{
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      align-items: center;
-      color: #fff;
-      overflow: hidden;
-      text-align: center;
-  }
-
-  .textos>h1{
-      font-size: 80px;
-  }
-
-  .textos>h2{
-      font-size: 30px;
-      font-weight: 300;
-  }
+/* Header */
+header{
+    width: 100%;
+    height: 600px;
+    background: linear-gradient(to bottom, rgba(124, 61, 241, 0.664), rgba(86,128,233,.6), rgba(90,185,234,.40), rgba(138,206,235,.40)), url(../img/geekscar_fondo.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+/* Propiedades generales de la barra de navegación*/
+nav{
+    width: 100%;
+    position: fixed;      
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.5);
+}
+/* Propiedades del Nav que se muestra cuando se posiciona en la parte más alta de la página */
+.nav1{
+    background: transparent;
+    height:80px;
+    color: #fff;
+}
+/* Propiedades del Nav que se muestra cuando se ha desplazado hacia abajo en la página */
+.nav2{      
+    background: linear-gradient(to right, rgb(124, 61, 241), rgb(86,128,233), rgb(90,185,234));
+    height: 100px;
+}
+/* Distribución y alineado de los elementos contenidos en el Nav*/
+.contenedor-nav{
+    display: flex;
+    margin: auto;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    height: inherit;
+    overflow: hidden;
+}
+/* Propiedades de los enlaces ubicados en el Nav*/
+nav .enlaces a{
+    display: inline-block;
+    padding: 5px 0;
+    margin-right: 17px;
+    font-size: 17px;
+    font-weight: 300;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    color: #fff;
+    font-weight: 600;
+}
+/* Efecto aplicado durante el hover a los enlaces ubicados en el Nav*/
+nav .enlaces a:hover{
+    border-bottom: 3px solid #5900ff;
+    transition: 0.6s;
+}
+/* Propiedades del ícono del menú hamburguesa */
+.icono{
+    display: none;
+    font-size: 24px;
+    padding: 23.5px 20px;
+}
+/* Propiedades del logo de la página ubicado en el header*/
+.logo{
+display: flex;
+justify-content: space-around;
+padding: 150px;    
+}
+.logo img{        
+width: 400px;       
+}
 
 /* Main */
+/* Propiedades generales del contenedor del Main*/
 .contenedor {
     margin: auto;
     padding: var(--margenes) 0;
@@ -169,64 +146,70 @@ img{
     text-align: center;
     overflow: hidden;
 }
-
+/* Propiedades de los encabezados h3 del contenedor */
 .contenedor h3{
-    font-size: var(--titulos);
-    color: var(--color1);
+    font-size: var(--titulos);    
+    color: #9c72fd;
+    font-weight: bold;
     margin-bottom: var(--espacios);
 }
-
+/* Propiedades del texto colocado en párrabos justo debajo de los  encabezados del contenedor */
 .contenedor p{
     font-size: var(--subtitulos);
-    font-weight: 300;
-    color: var(--color1);
+    font-weight: 700;    
+    color: #8894ff;    
 }
-
+/* Propiedades de la línea usada para dar énfasis al texto debajo de los  encabezados del contenedor */
 .after:after{
     content:'';
     display: block;
     margin: auto;
     margin-top: var(--espacios);
     width: 100px;
-    height: 2px;
-    background: var(--color1);
+    height: 2px;    
+    background: #84CEEB;
     margin-bottom: var(--espacios-contenido);
 }
-
+/* Propiedades de las cartas contenedoras de las Áreas de Trabajo */
 .card{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
-
+/* Propiedades de cada una de las cards a utilizarse dentro de las Áreas de Trabajo */
 .content-card{
     width: 31%;
     box-shadow: 0 0 6px 0 rgba(0,0,0,.5);
     overflow: hidden;
     height: 400px;
 }
-
+/* Propiedades del contenedor de la imagen del Área de Trabajo */
 .people{
     height:80%;    
 }
-
+/* Propiedades de la imagen del Área de Trabajo */
 .content-card img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-
+/* Propiedades del encabezado que contiene el nombre del Área de Trabajo */
+.texto-team h4{
+    color:#0026fc
+}
+/* Propiedades del texto descriptivo del Área de Trabajo */
 .texto-team{
     height:20%;
     width:100%;
     padding: var(--espacios) 0;
 }
 
+/* Propiedades del contenedor de Servicios*/
 .about{
-    background: url(../img/teclado.jpg);
+    background: url(../img/teclado.jpg);    
     height:auto;
 }
-
+/* Propiedades de color, distribución y alineación del nombre de cada Servicio*/
 .servicios{
     display: flex;
     color: #fff;
@@ -234,53 +217,50 @@ img{
     margin: auto;
     flex-wrap: wrap;    
 }
-
+/* Propiedades del contenido de cada una de las cajas a utilizarse dentro de Servicios */
 .caja-servicios{
     width: 30%;    
     margin: auto;
     text-align: center;
 }
-
+/* Propiedades del encabezado que contiene el nombre del Servicio */
 .caja-servicios>h4{
     margin-bottom: var(--espacios);    
 }
-
+/* Propiedades del texto descriptivo de cada Servicio */
 .caja-servicios>p{
     text-align: center;
 }
-
+/* Propiedades de los botones para filtrado de Trabajo*/
 .botones-work{
     overflow: hidden;    
 }
-
 .botones-work li{
     display: inline-block;
     text-align: center;
     margin-left: var(--espacios);
     margin-bottom: var(--espacios-contenido);
     padding: 6px 12px;
-    border: 1px solid var(--color1);
+    /*border: 1px solid var(--color1);*/
+    border: 2px solid #8860d0;
     list-style: none;
-    color: var(--color1);
+    /*color: var(--color1);*/
+    color: #8860d0;
 }
-
+/* Efecto aplicado durante el hover a los botones de filtrado de Trabajo*/
 .botones-work li:hover{
-    background: var(--color1);
+    /*background: var(--color1);*/
+    background: #8860d0;
     color: #fff;
     cursor: pointer;
 }
-
+/* Efecto de resaltado de botón seleccionado de filtrado de Trabajo*/
 .botones-work .active{
-    background: var(--color1);
+    /*background: var(--color1);*/
+    background: #8860d0;
     color: #fff;   
 }
-
-.galeria-work{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
+/* Propiedades de los contenedores de las imágenes de la galería de Trabajo*/
 .cont-work{
     width: 31%;
     box-shadow: 0 0 6px 0 rgba(0,0,0,.5);
@@ -288,70 +268,86 @@ img{
     overflow: hidden;
     margin-bottom: var(--espacios-contenido);
 }
-
+/* Propiedades de la galería de imágenes de Trabajo*/
+.galeria-work{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+/* Propiedades del espacio correspondiente a las imágenes dentro de los contenedores de la galería de Trabajo*/
 .img-work{
     height: 90%;
     width: 100%;
 }
-
+/* Propiedades de las imágenes de la galería de Trabajo*/
 .img-work img{
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
-
+/* Propiedades del espacio correspondiente al texto dentro de los contenedores de la galería de Trabajo*/
 .textos-work{
     height: 10%;    
 }
-
+/* Propiedades del texto de la galería de Trabajo*/
 .textos-work h4{
     line-height: 30px;
     font-weight: 300;
 }
 
 /* Footer */
+/* Propiedades del contenedor de Footer*/
 footer{
     background: url(../img/teclado.jpg);
 }
-
+footer img{
+    padding-bottom: var(--margenes);    
+}
+/* Propiedades del contenedor que almacena el logo mostrado en la sección Footer*/
 .marca-logo{
-    width: 40%;
+    width: 20%;
     margin: auto;
     margin-bottom: var(--espacios);
 }
-
+/* Propiedades del logo mostrado en la sección Footer*/
 .marca-logo img{
     width: 100%;
 }
-
+/* Propiedades del contenedor que almacen los iconos de Redes Sociales*/
 .iconos{
     display: flex;
     margin: auto;
     justify-content: space-around;
     width:100%;
 }
-
+/* Propiedades de los iconos de Redes Sociales*/
 .fab{
     font-size: 60px;
     color: #fff;
     margin-bottom: var(--espacios);
     display: inline-block;
 }
-
+/* Propiedades de la frase mostrada al fondo del footer*/
 footer p{
-    margin-top: var(--espacios);
+    margin-top: var(--espacios);    
 }
 
+/* Propiedades de página responsiva en un ancho de hasta 700px*/
 @media screen and (max-width: 700px){
-    .nav2{
-        color: #fff;
+    /* Sustitución del valor de la variable de márgenes*/
+    :root{
+        --margenes:30px;
     }
-
+    /* Propiedades del menú de navegación desplegable*/
+    .nav2{
+        color: #cacaca;        
+    }
+    /* Propiedades del menú hamburguesa*/
     .icono{
         display: block;
         cursor: pointer;
     }
-
+    /* Propiedades del espacio correspondiente a los enlaces contenidos en el menú de navegación desplegable*/
     .enlaces{
         position: fixed;
         top: 80px;
@@ -362,58 +358,59 @@ footer p{
         width: 0;
         overflow: hidden;
     }
-
+    /* Propiedades de los enlaces contenidos en el menú de navegación desplegable*/
     .enlaces a{
         display: block;
         width: 100%;
         height: 50px;
         padding: 20px;
         text-align: center;
-        background: #34495e;
+        background: #2c3e50;
         color: #fff;        
     }
-
+    /* Efecto aplicado durante el hover a los enlaces ubicados en el menú de navegación desplegable*/
+    .enlaces a:hover{
+        background: #8860d0;        
+    }
+    /* Propiedades de encabezados*/
     .textos>h1{
         font-size: 70px;        
     }
-
     .textos>h2{
         font-size: 35px;
     }
-
+    /* Propiedades de cada una de las cards a utilizarse dentro de las Áreas de Trabajo */
     .content-card{
         width: 48%;
         margin-bottom: var(--margenes);
-    }
-
-    :root{
-        --margenes:30px;
-    }
+    }    
 }
 
+/* Propiedades de página responsiva en un ancho de hasta 500px*/
 @media screen and (max-width: 500px){
+    /* Sustitución del valor de la variable de espacio entre contenidos*/
     :root{
         --espacios-contenido: 25px;
     }
-
+    /* Propiedades de cada una de las cards a utilizarse dentro de las Áreas de Trabajo */
     .content-card{
         width: 90%;
     }
-
+    /* Propiedades del contenido de cada una de las cajas a utilizarse dentro de Servicios */
     .caja-servicios{
         width: 90%;
         margin-bottom: var(--margenes);
     }
-
+    /* Propiedades de los contenedores de las imágenes de la galería de Trabajo*/
     .cont-work{
         width: 85%;
         margin-bottom: var(--margenes);
     }
-
+    /* Propiedades del logo mostrado en la sección Footer*/
     .marca-logo{
-        width: 80%;
+        width: 40%;
     }
-
+    /* Propiedades de los iconos de Redes Sociales*/
     .iconos{
         margin: auto;
     }
