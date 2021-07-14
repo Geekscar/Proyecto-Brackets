@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400&family=Ubuntu:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
 /* Asignación de Variables*/
 :root{        
     --titulos: 33px;
@@ -183,14 +185,15 @@ width: 400px;
 }
 /* Propiedades de cada una de las cards a utilizarse dentro de las Áreas de Trabajo */
 .content-card{
-    width: 31%;
-    box-shadow: 0 0 6px 0 rgba(0,0,0,.5);
+    width: 22%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
     overflow: hidden;
-    height: 400px;
+    height: 500px;   
+    border-radius: 20px; 
 }
 /* Propiedades del contenedor de la imagen del Área de Trabajo */
-.people{
-    height:80%;    
+.campo-tr{
+    height:80%;     
 }
 /* Propiedades de la imagen del Área de Trabajo */
 .content-card img{
@@ -199,14 +202,22 @@ width: 400px;
     object-fit: cover;
 }
 /* Propiedades del encabezado que contiene el nombre del Área de Trabajo */
-.texto-team h4{
+.texto-campo h4{
     color:#0026fc
 }
 /* Propiedades del texto descriptivo del Área de Trabajo */
-.texto-team{
+.texto-campo{
     height:20%;
     width:100%;
     padding: var(--espacios) 0;
+}
+.texto-campo h4{
+    text-transform: uppercase;
+    padding-bottom: 5px;
+}
+.texto-campo p{
+    font-size: .9em;    
+    padding: 0 5px 20px 5px;
 }
 
 /* Propiedades del contenedor de Servicios*/
@@ -292,7 +303,11 @@ width: 400px;
 }
 /* Propiedades del espacio correspondiente al texto dentro de los contenedores de la galería de Trabajo*/
 .textos-work{
-    height: 10%;    
+    height: 10%; 
+    font-family: 'Ubuntu';   
+    font-size: 1.1em;
+    font-weight: 300;
+    color: #5680e9;
 }
 /* Propiedades del texto de la galería de Trabajo*/
 .textos-work h4{
@@ -318,23 +333,41 @@ footer img{
 .marca-logo img{
     width: 100%;
 }
+
+.texto-contacto span{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+    justify-content: space-evenly;
+    padding: 0 0 20px 0;
+    font-family: 'Ubuntu';
+    font-size: 1.5em;
+    color: #fff;
+}
+.texto-contacto{
+    padding-bottom: 20px;
+}
 /* Propiedades del contenedor que almacen los iconos de Redes Sociales*/
 .iconos{
-    display: flex;
+    display: flex;    
     margin: auto;
     justify-content: space-around;
-    width:100%;
+    width:30%;
 }
 /* Propiedades de los iconos de Redes Sociales*/
 .fab{
-    font-size: 60px;
-    color: #fff;
+    font-size: 50px;
+    color: #c1c8e4;
     margin-bottom: var(--espacios);
     display: inline-block;
+    padding-bottom: 10px;
 }
 /* Propiedades de la frase mostrada al fondo del footer*/
 footer p{
-    margin-top: var(--espacios);    
+    margin-top: var(--espacios); 
+    text-transform: uppercase;   
+    font-size: 3em;    
 }
 
 /* Propiedades de página responsiva en un ancho de hasta 700px*/
