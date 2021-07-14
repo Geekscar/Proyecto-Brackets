@@ -1,4 +1,5 @@
 $(function(){
+    //Filtrado de tarjetas de Trabajo mediante JQuery
     $('.filter').click(function(){
         $(this).addClass('active').siblings().removeClass('active');
         let valor = $(this).attr('data-nombre');
@@ -10,46 +11,49 @@ $(function(){
         }
     });
 
+    //Declaración de variables usadas para los enlaces
     let equipo = $('#equipo').offset().top,
         servicio = $('#servicio').offset().top,
         trabajo = $('#trabajo').offset().top,
         contacto = $('#contacto').offset().top;    
 
-    window.addEventListener('resize', function(){
+    // Sustitución de valores almacenadas en las variables previamente declaradas
+        window.addEventListener('resize', function(){
         let equipo = $('#equipo').offset().top,
         servicio = $('#servicio').offset().top,
         trabajo = $('#trabajo').offset().top,
         contacto = $('#contacto').offset().top;    
     });
 
+    //Recorrido al Inicio de la página y desactivación del enlace
     $('#enlace-inicio').on('click', function(e){
         e.preventDefault();
         $('html, body').animate({
             scrollTop: 0
         }, 600);
     });
-
+    //Recorrido a la apartado Equipo y desactivación del enlace correspondiente
     $('#enlace-equipo').on('click', function(e){
         e.preventDefault();
         $('html, body').animate({
             scrollTop: equipo -100
         }, 600);
     });
-
+    //Recorrido a la apartado Servicios y desactivación del enlace correspondiente
     $('#enlace-servicio').on('click', function(e){
         e.preventDefault();
         $('html, body').animate({
             scrollTop: servicio -100
         }, 600);
     });
-    
+    //Recorrido a la apartado Trabajo y desactivación del enlace correspondiente
     $('#enlace-trabajo').on('click', function(e){
         e.preventDefault();
         $('html, body').animate({
             scrollTop: trabajo -100
         }, 600);
     });
-
+    //Recorrido a la apartado Contacto y desactivación del enlace correspondiente
     $('#enlace-contacto').on('click', function(e){
         e.preventDefault();
         $('html, body').animate({
