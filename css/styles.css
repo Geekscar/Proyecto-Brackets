@@ -1,29 +1,32 @@
+/* Asignación de Variables*/
 :root{        
     --titulos: 33px;
     --margenes: 60px;
     --espacios: 10px;
     --espacios-contenido:45px;
 }
-
+/* Propiedades generales del documento*/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+/* Propiedades generales del cuerpo de la página*/
 body{
     font-family: 'open sans';    
     background: #fff; 
 }
-
+/* Propiedades generales de imágenes de la página*/ 
 img{
     vertical-align: top;
 }
 
-/* Preloader */
+/* Preloader - Elemento mostrado durante la carga inicial o el refresh de todos los elementos de la página  */
+/* Propiedad para ocultar el Preloader cuando los elementos de la página ya han sido cargados*/
 .hidden{
     overflow: hidden;
 }
+/* Propiedad de centrado del Preloader durante la carga de los elementos de la página*/
 .centrado{
     position: fixed;
     width: 100vw;
@@ -40,6 +43,7 @@ img{
     width: 80px;
     height: 80px;
 }
+/* Propiedades generales del Preloader */
 .lds-hourglass:after {
 content: " ";
 display: block;
@@ -52,6 +56,7 @@ border: 32px solid #cef;
 border-color: #cef transparent #cef transparent;
 animation: lds-hourglass 1.2s infinite;
 }
+/* Animación del Preloader */
 @keyframes lds-hourglass {
 0% {
     transform: rotate(0);
