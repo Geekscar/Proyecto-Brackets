@@ -12,14 +12,14 @@ $(function(){
     });
 
     //Declaración de variables usadas para los enlaces
-    let equipo = $('#equipo').offset().top,
+    let campo = $('#campo').offset().top,
         servicio = $('#servicio').offset().top,
         trabajo = $('#trabajo').offset().top,
         contacto = $('#contacto').offset().top;    
 
     // Sustitución de valores almacenadas en las variables previamente declaradas
         window.addEventListener('resize', function(){
-        let equipo = $('#equipo').offset().top,
+        let campo = $('#campo').offset().top,
         servicio = $('#servicio').offset().top,
         trabajo = $('#trabajo').offset().top,
         contacto = $('#contacto').offset().top;    
@@ -32,11 +32,11 @@ $(function(){
             scrollTop: 0
         }, 600);
     });
-    //Recorrido a la apartado Equipo y desactivación del enlace correspondiente
-    $('#enlace-equipo').on('click', function(e){
+    //Recorrido a la apartado campo de trabajo y desactivación del enlace correspondiente
+    $('#enlace-campo').on('click', function(e){
         e.preventDefault();
         $('html, body').animate({
-            scrollTop: equipo -100
+            scrollTop: campo -100
         }, 600);
     });
     //Recorrido a la apartado Servicios y desactivación del enlace correspondiente
