@@ -190,7 +190,69 @@ width: 400px;
     overflow: hidden;
     height: 500px;   
     border-radius: 20px; 
+    cursor: pointer;    
 }
+
+/*Ventana Modal*/
+/*Propiedades del contenedor de los elementos que conforman la ventana modal*/
+.modal-container{
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background:rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*Propiedades de los elementos que conforman la ventana modal*/
+.modal1, .modal2, .modal3, .modal4{
+    width: 40%;
+    height:50%;
+    background: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+    transition: transform 1s;
+    transform: translateY(0%);
+    /* overflow: hidden; */
+}
+/*Propiedades del efecto de cierre de la ventana modal*/
+.modal-close1, .modal-close2, .modal-close3, .modal-close4{
+    transform: translateY(-200%);
+}
+/*Propiedades del botón de cierre de la ventana modal*/
+.close1, .close2, .close3, .close4{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background: #c44a4a;
+    color: #fff;
+    line-height: 25px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+/*Propiedades de la imagen contenida en la ventana modal*/
+.modal1>img, .modal2>img, .modal3>img, .modal4>img{
+    height:50%;     
+}
+/*Propiedades del texto contenido en la ventana modal*/
+.modal-textos{
+    background: #fff;
+    width: 80%; 
+    margin: auto;       
+    text-align: center;    
+}
+
 /* Propiedades del contenedor de la imagen del Área de Trabajo */
 .campo-tr{
     height:80%;     
@@ -219,7 +281,6 @@ width: 400px;
     font-size: .9em;    
     padding: 0 5px 20px 5px;
 }
-
 /* Propiedades del contenedor de Servicios*/
 .about{
     background: url(../img/teclado.jpg);    
@@ -294,6 +355,11 @@ width: 400px;
 .img-work{
     height: 90%;
     width: 100%;
+}
+/* Efecto de zoom durante el hover sobre elementos de la galería de imágenes de Trabajo*/
+.cont-work:hover{
+    transform: scale(1.2);
+    z-index: 3;
 }
 /* Propiedades de las imágenes de la galería de Trabajo*/
 .img-work img{
@@ -422,6 +488,8 @@ footer p{
         width: 48%;
         margin-bottom: var(--margenes);
     }    
+
+
 }
 
 /* Propiedades de página responsiva en un ancho de hasta 500px*/
