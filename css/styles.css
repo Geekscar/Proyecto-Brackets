@@ -463,6 +463,12 @@ footer img{
     color: #fff;
 }
 
+.footer p{
+    padding-top: 50px;
+    color:rgb(179, 178, 178);
+    font-size: .8em;
+}
+
 /* Propiedades de página responsiva en un ancho de hasta 700px*/
 @media screen and (max-width: 700px){
     /* Sustitución del valor de la variable de márgenes*/
@@ -516,6 +522,10 @@ footer img{
         width: 48%;
         margin-bottom: var(--margenes);
     }    
+
+    .content-card:hover{
+        transform: translateY(-2%);
+    }
 
     .modal1, .modal2, .modal3, .modal4{
         width: 90%;
