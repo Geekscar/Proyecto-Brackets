@@ -92,7 +92,7 @@ window.addEventListener('click', function(e){
     }
 });
 
-// Ventana Modal 1//
+// Ventana Emergente 1//
 abrirModal1.addEventListener("click", function(e){
     e.preventDefault();
     modalC1.style.opacity = "1";
@@ -116,7 +116,7 @@ window.addEventListener("click", function(e){
     }    
 });
 
-// Ventana Modal 2//
+// Ventana Emergente 2//
 abrirModal2.addEventListener("click", function(e){
     e.preventDefault();
     modalC2.style.opacity = "1";
@@ -140,7 +140,7 @@ window.addEventListener("click", function(e){
     }    
 });
 
-// Ventana Modal 3//
+// Ventana Emergente 3//
 abrirModal3.addEventListener("click", function(e){
     e.preventDefault();
     modalC3.style.opacity = "1";
@@ -164,7 +164,7 @@ window.addEventListener("click", function(e){
     }    
 });
 
-// Ventana Modal 4//
+// Ventana Emergente 4//
 abrirModal4.addEventListener("click", function(e){
     e.preventDefault();
     modalC4.style.opacity = "1";
