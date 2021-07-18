@@ -470,7 +470,7 @@ footer img{
 }
 
 /* Propiedades de página responsiva en un ancho de hasta 700px*/
-@media screen and (max-width: 700px){
+@media screen and (max-width: 800px){
     /* Sustitución del valor de la variable de márgenes*/
     :root{
         --margenes:30px;
@@ -491,16 +491,16 @@ footer img{
         top: 80px;
         background: #2c3e50;
         right: 0;
-        height: 100%;
+        height: 20%;
         transition: .6s;
         width: 0;
-        overflow: hidden;
+        overflow: hidden;        
     }
     /* Propiedades de los enlaces contenidos en el menú de navegación desplegable*/
     .enlaces a{
         display: block;
         width: 100%;
-        height: 50px;
+        height: 50;
         padding: 20px;
         text-align: center;
         background: #2c3e50;
@@ -561,5 +561,12 @@ footer img{
     /* Propiedades de los iconos de Redes Sociales*/
     .iconos{
         margin: auto;
+    }    
+}
+
+@media screen and (max-height: 800px){
+    /* Sustitución del valor de la variable de espacio entre contenidos*/
+    .enlaces{        
+        height: 50%;        
     }
 }
